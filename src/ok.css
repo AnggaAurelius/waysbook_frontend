@@ -1,0 +1,226 @@
+.img {
+  position: absolute;
+  right: 0%;
+  height: 100%;
+}
+
+.mgtop {
+  margin-top: 10px;
+}
+
+.logowow {
+  height: 90px;
+  width: auto;
+  transform: rotate(-20deg);
+}
+.foto {
+  height: 90px;
+  width: auto;
+}
+.bold {
+  font-weight: bold;
+}
+.mini {
+  height: 35px;
+  width: auto;
+  margin-left: 20%;
+}
+
+.mtop {
+  margin-top: 60px;
+}
+.linkSide {
+  font-size: 25px;
+  color: #929292;
+}
+.linkSide:hover,
+.linkSide:focus {
+  text-decoration-color: transparent;
+  color: #929292;
+}
+.mbot {
+  margin-bottom: 60px;
+}
+.line {
+  border: 1px solid #c9c9c9;
+  width: 200px;
+}
+.frame {
+  height: auto;
+  width: 95%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cover {
+  min-height: 570px;
+  height: auto;
+  width: 400px;
+  max-width: 300px;
+  margin-top: 80px;
+}
+
+.detxt {
+  margin-top: 170px;
+  font-size: 35px;
+}
+.bwhknn {
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+}
+
+.bwhkn2 {
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  right: 160px;
+  bottom: 1px;
+}
+
+.smpic {
+  width: 50px;
+}
+.sub {
+  width: 300px;
+  margin-left: 32%;
+}
+.centerd {
+  margin-top: 10%;
+}
+
+.flbtn {
+  height: 30px;
+}
+.subtn {
+  height: 45px;
+  font-size: 16px;
+}
+.formsub {
+  background: rgba(210, 210, 210, 0.25);
+  border: 1px solid #bcbcbc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 45px;
+}
+.lbook {
+  width: 100%;
+  max-width: 200px;
+  max-height: 250px;
+  min-height: 270px;
+  border-radius: 1px;
+}
+.pp {
+  background: #ffd9d9;
+  border-radius: 5px;
+}
+.mleft {
+  padding-left: 200px;
+}
+
+.w {
+  width: 400px;
+}
+
+.avenir {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.timesNew {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.gray {
+  font-size: 18px;
+  color: #929292;
+}
+.red {
+  color: rgb(255, 7, 7);
+}
+.green {
+  color: #29bd11;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.mlr {
+  padding: 150px 220px 30px 220px;
+}
+.right {
+  position: absolute;
+  top: 0%;
+  right: -80px;
+  transform: rotate(0deg);
+  width: 55px;
+  height: auto;
+}
+.txtarea {
+  background: rgba(210, 210, 210, 0.25);
+  border: 1px solid #bcbcbc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+.fs-50 {
+  font-size: 50px;
+}
+.flink {
+  cursor: pointer;
+}
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.Modalsub {
+  position: fixed;
+  top: -80vh;
+  background-color: #ffffff;
+  width: 600px;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
+  left: 40%;
+  padding: 0 12px 12px;
+  transition: all 0.6s ease-out;
+  z-index: -2;
+  border-radius: 5px;
+}
+
+.Modalsub.Show {
+  top: 20%;
+  z-index: 20;
+}
+
+label.coverBtn {
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ececec;
+  color: #686868;
+  height: 51px;
+  border: 3px solid #b9b8b8;
+  border-radius: 3px;
+  padding: 10px 0;
+  padding-right: 15px;
+  margin-top: 1rem;
+  margin-right: 800px;
+  font-size: 16px;
+}

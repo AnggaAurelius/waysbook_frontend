@@ -1,0 +1,331 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  background-color: #e7e4f7;
+}
+.bold {
+  font-weight: bold;
+}
+.white {
+  color: white;
+}
+.gray {
+  color: #929292;
+}
+.bgWhite {
+  background-color: #ffffff;
+}
+.timesNew {
+  font-family: "Times New Roman";
+  font-weight: bold;
+}
+.bg-gray {
+  background-color: #98aec4;
+}
+.bgland {
+  background-color: #ffffff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.botland {
+  background-color: #e5e5e5;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+.full {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+.w00 {
+  width: 100%;
+}
+.tombol {
+  background-color: #c7c7c7;
+  border: 3px solid #a8a8a8;
+  border-radius: 3px;
+  padding: 5px;
+}
+.tombol:hover,
+.tombol:active,
+.tombol:focus,
+.tombol.active {
+  border: 3px solid #6b6a6a;
+}
+.blackBtn {
+  background-color: #393939;
+  border: 3px solid #393939;
+  border-radius: 1px;
+}
+.blackBtn:hover,
+.blackBtn:active,
+.blackBtn:focus,
+.blackBtn.active {
+  background-color: #575757;
+  border: 3px solid #393939;
+}
+.Modal {
+  position: fixed;
+  top: -80vh;
+  background-color: #ffffff;
+  width: 400px;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
+  left: 40%;
+  padding: 0 12px 12px;
+  transition: all 0.6s ease-out;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.Modal.Show {
+  top: 20%;
+  z-index: 3;
+}
+
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.281);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -2;
+  transition: all 0.6s ease-out;
+  transition-property: z-index;
+  transition-delay: 0.1s;
+}
+
+.Overlay.Show {
+  z-index: 1;
+}
+.logoBook {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+.profileBody {
+  width: 100%;
+  padding: 100px 220px 0 220px;
+}
+.btn-red {
+  color: white;
+  background-color: #db0000;
+  border: none;
+  border-radius: 3px;
+  height: 45px;
+}
+.btn-red:hover,
+.btn-red:active,
+.btn-red:focus,
+.btn-red.active {
+  background-color: #ad0202;
+  border: 3px solid #860000;
+}
+.fs-45 {
+  font-size: 45px;
+}
+.fs-35 {
+  font-size: 35px;
+}
+.w-18 {
+  font-size: 18px;
+  color: white;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.btnDwld {
+  width: 200px;
+  height: 39px;
+  color: white;
+}
+.myBooks {
+  margin: 80px 0;
+  font-size: 35px;
+}
+.authorPr {
+  font-style: italic;
+  font-size: 14px;
+}
+.mp-10 {
+  margin-top: 100px;
+}
+.ml-270 {
+  margin: 0 19%;
+}
+.titleDetail {
+  width: 910px;
+  line-height: 50px;
+}
+.detailCart {
+  width: 120px;
+  height: 40px;
+  color: white;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.detaildwn {
+  width: 120px;
+  height: 40px;
+  color: white;
+  margin-bottom: 10px;
+  margin-right: -120px;
+  z-index: 2;
+}
+.imgMini {
+  height: 15px;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.mCart {
+  margin: 150px 200px 50px 200px;
+}
+.order {
+  width: 55%;
+  margin-right: 10px;
+}
+hr.line2 {
+  border: 1px solid #393939;
+  width: 100%;
+}
+.subTotal {
+  width: 39%;
+  margin-left: 20px;
+}
+.total {
+  position: absolute;
+  right: 210px;
+}
+.pay {
+  margin-top: 20px;
+  width: 260px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.imgOrder {
+  width: 130px;
+  height: 170px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+.authorOr {
+  font-style: italic;
+  margin-top: -10px;
+}
+.priceOr {
+  font-weight: 800;
+  font-size: 14px;
+  color: #44b300;
+  margin-top: 30px;
+}
+.trash {
+  position: absolute;
+  margin-left: 580px;
+}
+.detailOr {
+  width: 430px;
+  line-height: 25px;
+}
+.minBG {
+  min-height: 790px;
+}
+.pointer {
+  cursor: pointer;
+}
+.inputFile {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 123px;
+  width: 600px;
+}
+.authorC {
+  font-style: italic;
+  font-size: 14px;
+  color: gray;
+}
+.priceC {
+  font-weight: 800;
+  font-size: 18px;
+  color: #44b300;
+}
+.scrollY {
+  overflow-y: scroll;
+}
+.hide {
+  display: none;
+}
+.preview {
+  width: 300px;
+  height: auto;
+  margin-top: -170px;
+  margin-left: -20px;
+}
+.imgcrt {
+  margin-left: 20px;
+}
+.front {
+  z-index: 2;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.avenir {
+  font-family: "Nunito Sans", sans-serif;
+}
+.cartNo {
+  position: absolute;
+  top: 50px;
+  right: 155px;
+  background-color: rgb(231, 39, 39);
+  color: white;
+  border-radius: 15px;
+  width: 20px;
+  height: 21px;
+}
+
+.bgImage {
+  background-size: auto 1810px;
+  background-repeat: repeat-y;
+}
+
+.blueTick {
+  width: auto;
+  height: 25px;
+}
+
+.profilPic {
+  width: 300px;
+  height: 250px;
+}
+.preview2 {
+  width: 300px;
+  height: auto;
+}
+.navPic {
+  margin-top: 55px;
+  min-height: 40px;
+  max-height: 40px;
+  max-width: 50px;
+}
+.crimson {
+  font-family: "Crimson Text", serif;
+}

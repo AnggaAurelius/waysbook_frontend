@@ -1,0 +1,87 @@
+.bgt {
+  background-color: #e5e5e5;
+}
+.content-table {
+  border-collapse: collapse;
+}
+.content-table thead tr {
+  border-bottom: 2px solid #d3d3d3;
+  text-align: left;
+}
+.content-table th,
+.content-table td {
+  padding: 5px 15px;
+}
+.content-table tbody tr {
+  height: 65px;
+  border-bottom: 2px solid #d3d3d3;
+  background-color: #e5e5e586;
+}
+.content-table tbody tr:hover {
+  background-color: #c2ced685;
+}
+.content-table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff77;
+}
+.content-table tbody tr:nth-of-type(odd):hover {
+  background-color: #c2ced67a;
+}
+.dro .dropbtn {
+  padding: 10px;
+  font-size: 12px;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 90px;
+  display: none;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px;
+  margin-left: 40px;
+  margin-top: -45px;
+}
+.dropdown-content div {
+  color: black;
+  padding: 10px 9px;
+  height: 40px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: grey;
+}
+.center {
+  text-align: center;
+}
+.aksi {
+  padding: 15px 25px 15px 15px;
+  cursor: pointer;
+}
+.aksi2 {
+  padding: 15px 25px 15px 15px;
+  cursor: pointer;
+}
+.approve {
+  color: #0acf83;
+}
+.trsfProof {
+  max-width: 400px;
+  max-height: 400px;
+}
+.navPg {
+  position: absolute;
+  bottom: -3px;
+}
