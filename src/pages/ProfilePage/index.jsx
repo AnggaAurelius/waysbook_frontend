@@ -69,7 +69,7 @@ const Profile = () => {
         },
       };
 
-      await API.patch("/editUser", body, config);
+      await API.patch("/edit-user", body, config);
       getUser();
       handleClose();
     } catch (error) {
@@ -100,7 +100,7 @@ const Profile = () => {
     setShow(true);
   };
   const [form2, setForm2] = useState({
-    imageFile: null,
+    thumbnail: null,
   });
   const [filee, setFile] = useState();
 
@@ -113,7 +113,7 @@ const Profile = () => {
     setFile(URL.createObjectURL(e.target.files[0]));
   };
 
-  const { imageFile } = form2;
+  const { thumbnail } = form2;
 
   const submitImage = async (e) => {
     e.preventDefault();
@@ -121,7 +121,7 @@ const Profile = () => {
     try {
       const body = new FormData();
 
-      body.append("imageFile", imageFile);
+      body.append("thumbnail", thumbnail);
 
       const config = {
         headers: {
@@ -129,7 +129,7 @@ const Profile = () => {
         },
       };
 
-      await API.patch("/editPic", body, config);
+      await API.patch("/edit-pic", body, config);
       history.push(`/loading${path}`);
     } catch (error) {
       console.log(error);
@@ -205,13 +205,13 @@ const Profile = () => {
             {myBook.map((mybook) => (
               <div className=" mr-4 ml-3 mb-5" key={mybook.id}>
                 <a
-                  href={`http://localhost:5000/uploads/${mybook.book.bookAttachment}`}
+                  href={mybook.book.bookAttachment}
                   className="bold"
                   target="_blank"
                 >
                   <img
                     className="lbook flink text-center"
-                    src={`http://localhost:5000/uploads/${mybook.book.thumbnail}`}
+                    src={mybook.book.thumbnail}
                     alt=""
                   />
                 </a>
@@ -223,7 +223,7 @@ const Profile = () => {
                 </h3>
                 <p className="gray authorPr">{mybook.book.author}</p>
                 <a
-                  href={`http://localhost:5000/uploads/${mybook.book.bookAttachment}`}
+                  href={mybook.book.bookAttachment}
                   className="bold"
                   target="_blank"
                 >
@@ -298,7 +298,7 @@ const Profile = () => {
                 <Form.File
                   className="position-relative"
                   required
-                  name="imageFile"
+                  name="thumbnail"
                   onChange={(e) => onChange2(e)}
                   feedbackTooltip
                 />

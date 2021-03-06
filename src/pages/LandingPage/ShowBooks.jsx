@@ -14,8 +14,8 @@ export const ShowBooks = () => {
     try {
       setLoading(true);
       const books = await API.get("/books");
-      setLoading(false);
       setBooks(books.data.data.books);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +34,9 @@ export const ShowBooks = () => {
     getBooks();
     getCart();
   }, []);
-  return (
+  return loading ? (
+    <h1></h1>
+  ) : (
     <div className="showBooks">
       <p className="fs-45 crimson">With us, you can shop online & help</p>
       <p className="fs-45 crimson">save your high street at the same time</p>
@@ -48,10 +50,10 @@ export const ShowBooks = () => {
       <div className="bgray">
         <div className="listBook row">
           {books.map((Books) => (
-            <div className="col-sm-2 mr-4 pb-4 pt-4">
+            <div className="col-lg-2 mr-4 pb-4 pt-4">
               <img
-                src={`http://localhost:5000/uploads/${Books.thumbnail}`}
-                className="book pointer"
+                src={Books.thumbnail}
+                className="book  pointer"
                 alt=""
                 onClick={() => read(Books.id)}
               />

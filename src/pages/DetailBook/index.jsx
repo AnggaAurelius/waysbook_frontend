@@ -58,6 +58,7 @@ export const Detailbook = () => {
         },
       };
       const check = await API.post("/addCart", body, config);
+      console.log(check);
       if (check.data.status === "wait") {
         setText("Please wait 1 x 24 hours to verify your order");
         setShow(true);
@@ -94,16 +95,12 @@ export const Detailbook = () => {
     getCart();
   }, []);
   return loading ? (
-    <h1>loading</h1>
+    <h1></h1>
   ) : (
     <div className="bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <Navbar />
       <div className="mp-10 pt-60 text-left ml-270 mb-5">
-        <img
-          className="cover  float-left mr-5"
-          src={`http://localhost:5000/uploads/${book.thumbnail}`}
-          alt=""
-        />
+        <img className="cover  float-left mr-5" src={book.thumbnail} alt="" />
         <p className="mt-5 pt-5 timesNew fs-50 titleDetail">{book.title}</p>
         <h1 className="gray fs-25">{book.author}</h1>
         <div className="mt-5">

@@ -220,17 +220,13 @@ export const List = () => {
         <Modal show={show} onHide={handleClose}>
           <Modal.Body className="center pt-4 pl-4">
             {modal === "transfer" ? (
-              <img
-                src={`http://localhost:5000/uploads/${image}`}
-                className=" trsfProof"
-                alt=""
-              />
+              <img src={image} className=" trsfProof" alt="" />
             ) : (
               books.map((Purchased) => (
                 <div className="row mb-5" key={Purchased.id}>
                   {/* <p hidden>{qty++}</p> */}
                   <img
-                    src={`http://localhost:5000/uploads/${Purchased.book.thumbnail}`}
+                    src={Purchased.book.thumbnail}
                     alt=""
                     className="imgOrder"
                   />

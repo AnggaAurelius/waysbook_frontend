@@ -8,6 +8,7 @@ import Navbar from "../../../component/Navbar";
 
 export const AddBook = () => {
   const [show, setShow] = useState(false);
+  const [message, setMessage] = useState("");
   const handleClose = () => setShow(false);
   const [form, setForm] = useState({
     title: "",
@@ -61,8 +62,10 @@ export const AddBook = () => {
           "Content-Type": "multipart/form-data",
         },
       };
-
+      setMessage("Please wait...");
+      setShow(true);
       await API.post("/upload-book", body, config);
+      setMessage("Successfully added book");
       setShow(true);
       setForm({
         title: "",
@@ -184,7 +187,7 @@ export const AddBook = () => {
             </label>
           </div>
           <button
-            className=" mt-4 bold subtn avenir pl-3 float-right blackBtn white"
+            className=" mt-4 bold subtn avenir pl-3 float-right blackBtn white mb-4"
             type="submit"
           >
             Add Book
@@ -198,7 +201,7 @@ export const AddBook = () => {
         onHide={handleClose}
         className="pt-5 mt-5 fs-20 green avenir"
       >
-        <Modal.Body className="center">Successfully added book</Modal.Body>
+        <Modal.Body className="center">{message}</Modal.Body>
       </Modal>
     </div>
   );

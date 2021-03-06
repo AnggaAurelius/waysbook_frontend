@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import "./dropStyles.css";
 import "../ok.css";
 import book from "../pages/LandingPage/img/waysBooks.png";
-import profile from "./img/Profile.png";
 import ic_profile from "./img/ic_profile.png";
 import add from "./img/addBook.png";
 import logOut from "./img/logoutRed.png";
@@ -14,6 +13,7 @@ import { API } from "../config/axios";
 
 const Navbar = () => {
   const [state, dispatch] = useContext(AppContext);
+  const [loading, setLoading] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const setOverlay = () => setIsActive(false);
   const onClick = () => setIsActive(!isActive);
@@ -25,9 +25,9 @@ const Navbar = () => {
   const [profile, setProfile] = useState([]);
   const getUser = async () => {
     try {
-      // setLoading(true);
+      setLoading(true);
       const user = await API.get("/user");
-      // setLoading(false);
+      setLoading(false);
       setProfile(user.data.data.user);
     } catch (error) {
       console.log(error);
@@ -42,7 +42,7 @@ const Navbar = () => {
       <Link to="/beranda" as={Link}>
         <img className=" logoBook" src={book} alt="" />
       </Link>
-      <div className="container">
+      <div className="navProf">
         <div className="menu-container">
           <Link to="/cart" as={Link}>
             <img
@@ -53,8 +53,8 @@ const Navbar = () => {
           </Link>
           <button onClick={onClick} className="menu-trigger">
             <img
-              className="navPic right"
-              src={`http://localhost:5000/uploads/${profile.avatar}`}
+              className={`navPic right ${loading ? "" : ""}  `}
+              src={profile.avatar}
               alt=""
             />
           </button>

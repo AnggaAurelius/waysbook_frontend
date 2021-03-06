@@ -104,7 +104,7 @@ export const PromoteBook = () => {
         <div className="popularBook mt-5 ml-3 col-md-5 " key={Books.id}>
           <Link to={`/detail/${Books.id}`} as={Link} className="">
             <img
-              src={`http://localhost:5000/uploads/${Books.thumbnail}`}
+              src={Books.thumbnail}
               className="float-left  mr-2 pr-1 imgCover "
               alt=""
             />
@@ -123,11 +123,7 @@ export const PromoteBook = () => {
             </button>
             {cek.map((Cek) => (
               <div className="" key={Cek.id}>
-                <a
-                  href={`http://localhost:5000/uploads/${Cek.book.bookAttachment}`}
-                  className=""
-                  target="_blank"
-                >
+                <a href={Cek.book.bookAttachment} className="" target="_blank">
                   <button className="tombol blackBtn btnCart2 ">
                     Download
                   </button>
