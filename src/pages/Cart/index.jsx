@@ -109,19 +109,18 @@ export const Cart = () => {
   }, []);
 
   return (
-    <div className=" bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
+    <div className="bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <Navbar />
-      <div className="mCart text-left">
+      <div className="mCart text-left ">
         <p className="timesNew fs-25 mb-4 pt-3">My Cart</p>
-
         <div className="row">
-          <div className="order fs-18 ml-3">
+          <div className="order fs-18  col-xl-6">
             Review Your Order
             <hr className="line2 mr-5" />
             {cart.map((Cart) => (
               <div className="row mb-5" key={Cart.id}>
                 <p hidden>{qty++}</p>
-                <img src={Cart.book.thumbnail} alt="" className="imgOrder" />
+                <img src={Cart.book.thumbnail} alt="" className="imgOrder " />
                 <div className=" ml-1 detailOr">
                   <p className="timesNew fs-25">{Cart.book.title}</p>
                   <p className=" gray authorOr">{Cart.book.author}</p>
@@ -145,8 +144,7 @@ export const Cart = () => {
               <p></p>
             )}
           </div>
-
-          <div className="subTotal">
+          <div className=" col-xl-5">
             <hr className="line2 mt-5" />
             <div className="row ml-1">
               <p>Subtotal</p>
@@ -162,7 +160,7 @@ export const Cart = () => {
               <p className="total">Rp. {zero ? "0" : data.pay}</p>
             </div>
 
-            <div className=" ml-1 mt-3">
+            <div className=" float-right mt-3">
               <form className="sub" onSubmit={(e) => submitImage(e)}>
                 <div className="form-group">
                   <input
@@ -180,7 +178,7 @@ export const Cart = () => {
 
                 <button
                   type="submit"
-                  className="float-right blackBtn pay mr-3 mt-5"
+                  className="float-right blackBtn pay mr-4 mt-5"
                 >
                   Pay
                 </button>

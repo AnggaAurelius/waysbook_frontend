@@ -101,7 +101,7 @@ export const PromoteBook = () => {
   return (
     <div className="row">
       {books.map((Books) => (
-        <div className="popularBook mt-5 ml-3 col-md-5 " key={Books.id}>
+        <div className="popularBook mt-5 ml-3 col-lg-5 " key={Books.id}>
           <Link to={`/detail/${Books.id}`} as={Link} className="">
             <img
               src={Books.thumbnail}

@@ -45,6 +45,7 @@
   left: 0;
   right: 0;
   position: fixed;
+  background-color: #e5e5e5;
 }
 .w00 {
   width: 100%;
@@ -194,7 +195,7 @@
   padding-bottom: 20px;
 }
 .mCart {
-  margin: 150px 200px 50px 200px;
+  margin: 150px 150px 50px 200px;
 }
 .order {
   width: 55%;
@@ -210,7 +211,7 @@ hr.line2 {
 }
 .total {
   position: absolute;
-  right: 210px;
+  right: 15px;
 }
 .pay {
   margin-top: 20px;
@@ -225,6 +226,7 @@ hr.line2 {
   height: 170px;
   margin-right: 10px;
   margin-left: 15px;
+  margin-bottom: 20px;
 }
 .authorOr {
   font-style: italic;
@@ -238,11 +240,12 @@ hr.line2 {
 }
 .trash {
   position: absolute;
-  margin-left: 580px;
+  right: 15px;
 }
 .detailOr {
-  width: 430px;
+  width: 350px;
   line-height: 25px;
+  padding-left: 10px;
 }
 .minBG {
   min-height: 790px;
@@ -273,10 +276,10 @@ hr.line2 {
   display: none;
 }
 .preview {
-  width: 300px;
+  width: 265px;
   height: auto;
   margin-top: -170px;
-  margin-left: -20px;
+  margin-left: 15px;
 }
 .imgcrt {
   margin-left: 20px;
