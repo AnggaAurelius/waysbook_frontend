@@ -5,6 +5,7 @@ import { API } from "../../config/axios";
 import Navbar from "../../component/Navbar";
 import { Modal } from "react-bootstrap";
 import bgw from "../bgw.jpg";
+import Loader from "react-loader-spinner";
 
 export const Detailbook = () => {
   const [loading, setLoading] = useState(true);
@@ -95,7 +96,15 @@ export const Detailbook = () => {
     getCart();
   }, []);
   return loading ? (
-    <h1></h1>
+    <div className=" full bgImage pt-5 " style={{ backgroundImage: `url( ${bgw})` }}>
+     <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={500}
+        width={500}
+        timeout={3000} //3 secs
+      />
+    </div>
   ) : (
     <div className="bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <Navbar />

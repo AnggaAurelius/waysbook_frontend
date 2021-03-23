@@ -10,6 +10,7 @@ import { Button, Modal, Form } from "react-bootstrap";
 import { API } from "../../config/axios";
 import bgw from "../bgw.jpg";
 import { createBrowserHistory } from "history";
+import Loader from "react-loader-spinner";
 
 const Profile = () => {
   const history = useHistory();
@@ -143,7 +144,15 @@ const Profile = () => {
   }, []);
 
   return loading ? (
-    <p></p>
+     <div className=" full bgImage pt-5 " style={{ backgroundImage: `url( ${bgw})` }}>
+     <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={500}
+        width={500}
+        timeout={3000} //3 secs
+      />
+    </div>
   ) : (
     <div className=" bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <div className="">

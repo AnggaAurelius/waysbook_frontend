@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { API } from "../../config/axios";
 import { AppContext } from "../../component/context/Global";
 import { PromoteBook } from "../HomePage/promoteBook";
+import Loader from "react-loader-spinner";
+import bgw from '../LandingPage/img/bgw.jpg'
 
 export const ShowBooks = () => {
   const [state] = useContext(AppContext);
@@ -35,7 +37,15 @@ export const ShowBooks = () => {
     getCart();
   }, []);
   return loading ? (
-    <h1></h1>
+     <div className=" full bgImage pt-5 " style={{ backgroundImage: `url( ${bgw})` }}>
+     <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={500}
+        width={500}
+        timeout={3000} //3 secs
+      />
+    </div>
   ) : (
     <div className="showBooks">
       <p className="fs-45 crimson">With us, you can shop online & help</p>
