@@ -94,7 +94,9 @@ export const List = () => {
   const number = num.slice(firstIndex, lastIndex);
 
   const handlePage = (pageNumber) => setCurrentPage(pageNumber);
-  return (
+  return loading ? (
+    <p></p>
+  ) : (
     <div className="minBG bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <Navbar />
       <div className="mlr ">

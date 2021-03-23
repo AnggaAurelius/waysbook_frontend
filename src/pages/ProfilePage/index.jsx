@@ -15,6 +15,7 @@ const Profile = () => {
   const history = useHistory();
   const history2 = createBrowserHistory();
   const path = history2.location.pathname;
+  const [loading, setLoading] = useState(true);
   const [state] = useContext(AppContext);
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState("");
@@ -25,9 +26,9 @@ const Profile = () => {
   const [profile, setProfile] = useState([]);
   const getUser = async () => {
     try {
-      // setLoading(true);
+      setLoading(true);
       const user = await API.get("/user");
-      // setLoading(false);
+      setLoading(false);
       setProfile(user.data.data.user);
     } catch (error) {
       console.log(error);
@@ -141,7 +142,9 @@ const Profile = () => {
     getMyBook();
   }, []);
 
-  return (
+  return loading ? (
+    <p></p>
+  ) : (
     <div className=" bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <div className="">
         <Navbar />

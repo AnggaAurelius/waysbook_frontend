@@ -108,7 +108,9 @@ export const Cart = () => {
     getCart();
   }, []);
 
-  return (
+  return loading ? (
+    <p></p>
+  ) : (
     <div className="bgImage" style={{ backgroundImage: `url( ${bgw})` }}>
       <Navbar />
       <div className="mCart text-left ">

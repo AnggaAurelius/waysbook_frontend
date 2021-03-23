@@ -306,8 +306,9 @@ hr.line2 {
 }
 
 .bgImage {
-  background-size: auto 1810px;
+  background-size: cover;
   background-repeat: repeat-y;
+  /* width: 100%; */
 }
 
 .blueTick {
